@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang= "en-US" dir="ltr">
+<!-- href="{{ url_for('static' , filename='css/lengthStyle.css') }}"     href="../static/css/lengthStyle.css"-->
+<head>
+
+	<title>Give us the lenght! </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="stylesheet"  href="{{ url_for('static' , filename='css/lengthStyle.css') }}" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="content-header">
+		<h1>In order to continue please enter the length of your curtain</h1>
+	</header>
+<div class="length">
+	<div class="length-content">
+			<!--<span class="close" onclick="closeModal()">&times;</span> -->
+			<div class="lengthForm">
+				<form action="/Welcome" method="post">
+				<label>
+					length:
+					<input type="number" name="length" value="" placeholder="example: 272cm">
+				</label>
+				<label>
+					<input type="checkbox" value="checked" required>
+          By checking this box you agreed to our <a href="#">Terms of Services</a>
+        </label>
+				<input type="submit" id="okBtn" name="submit" value="Ok">
+				</form>
+			</div>
+	</div>
+	</div>
+  <footer>
+    <img class="icon" src="https://img.icons8.com/material-two-tone/48/000000/telegram-app.png"/>
+    <img class="icon" src="https://img.icons8.com/material-two-tone/48/000000/linkedin.png"/>
+    <img class="icon" src="https://img.icons8.com/material-two-tone/48/000000/gmail.png"/>
+    <img class="icon" src="https://img.icons8.com/material-two-tone/48/000000/instagram-new.png"/>
+    <br>
+    <a href="https://icons8.com/icon/l7PLniR__Vsn/telegram-app" target="_blank">Icons by Icons8</a>
+  </footer>
+</body>
+</html>
+

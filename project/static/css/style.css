@@ -1,0 +1,227 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Kalam', cursive;
+}
+html {
+	height: 100%;
+	width:100%;
+}
+body{
+	margin: 0;
+	height: 100%;
+	width:100%;
+}
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 12%;
+	padding-top: 1%;
+	padding-bottom:1%;
+	background-color: #8d99ae;
+	text-align:center;
+}
+h1 , h2 {
+	margin: 0;
+}
+a:link {
+	padding:5px;
+	color: white;
+	text-decoration: none;
+	border-radius:2px;
+	margin-bottom: 0;
+	padding: 0;
+}
+a:visited {
+	color:white;
+}
+label {
+	display: block;
+}
+.header{
+/*	box-sizing: border-box; */
+	height:18%;
+	padding: 1%;
+	background-color: #8d99ae;
+	text-align: center;
+}
+.mainPart {
+	position: relative;
+	color: white;
+	background-color: #b7b7b7;
+	border-radius: 8px;
+	height : 60%;
+	width: 70%;
+	margin: 2% auto 0;
+}
+.gridContainer{
+	display: grid;
+	grid-template-columns: repeat(9 , 1fr);
+	grid-template-rows: repeat(3 , 1fr);
+}
+.item1{
+	grid-column: 1 / span 9;
+	display : inline-block;
+	height:80%;
+	margin:2% 0 0;
+}
+.syncInput{
+	background-color:#ccc;
+	width:50%;
+	display: none;
+	border-radius: 4px;
+	margin: 1% 25.5%;
+	text-align:center;
+}
+.item2 {
+	grid-column: 1/ span 2;
+/* margin-left: 3%; */
+}
+.item3{
+	grid-column: 3/ span 5;
+}
+.item4{
+	grid-column: 8/ span 9;
+}
+button + a {
+	height: 30px;
+	margin: 50% auto 0 ;
+}
+.progress{
+	height:70%;
+	border-radius: 4px;
+	background-color: #2b2d42 ;
+	padding: 2% 0 0 0;
+	margin: 0 6% 0;
+	text-align: center;
+}
+.btn {
+	padding: 0;
+	color: white;
+	border: none;
+	background-color: #464f51;
+	opacity: 1;
+	margin: auto;
+}
+.lowBtn , .hiBtn {
+	height: 25%;
+	width: 15%;
+	border-radius: 10%;
+}
+.arrow{
+	border: solid black;
+	border-width: 0 5px 5px 0 ;
+	display: inline-block;
+	padding: 3px;
+}
+.left{
+	transform: rotate(135deg);
+}
+.right{
+	transform: rotate(-45deg);
+}
+.go {
+	background-color: #2b2d42;
+	width: 100%;
+	height: 50%;
+	border-radius: 1%;
+}
+.btn:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+.icon {
+	width: 24px;
+	height: 24px;
+}
+.icon:hover{
+	cursor: pointer;
+}
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.3);
+	overflow: auto;
+}
+.modal-content {
+	width: 40%;
+	height: 40%;
+	margin: auto;
+	padding: 2%;
+	position: relative;
+	top: 20%;
+	background-color: #fefefe;
+	animation-name: showUp;
+	animation-duration: 1s;
+	border-radius: 10px;
+}
+.modal-header {
+	border-radius: 0 0 2% 2%;
+	background-color:  #8d99ae ;
+	padding: 2%;
+}
+.close {
+	float: right;
+	margin-right: 2%;
+	color: white;
+	font-size: 1.2em;
+}
+.close:hover{
+	cursor:pointer;
+}
+.form {
+	margin-top: 2%;
+}
+@keyframes showUp {
+	from { top: -10%; opacity: 0}
+	to {top: 20%; opacity: 1;}
+}
+.switch{
+	display: inline-block;
+	position: relative;
+	width: 60px;
+	height: 30px;
+	margin: auto;
+}
+.slider {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #ccc;
+	border-radius: 10px;
+	transition: 0.4s;
+}
+.slider::before {
+	content: "" ;
+	position: absolute;
+	left: 4px;
+	bottom: 4px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background-color: white;
+	transition: transform 0.4s;
+}
+input:checked + .slider::before {
+	transform: translateX(28px);
+}
+input:checked + .slider {
+	background-color: #2b2d42;
+}
+.scaduleDoneMessage {
+	display: none;
+	background-color: #ccc;
+	width: 15%;
+	border-radius: 4px;
+}
+.flash{
+	display:none;
+}

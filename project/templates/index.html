@@ -1,0 +1,71 @@
+<!------ I write the schedule as scadule by mistake :)) -->
+<!DOCTYPE html>
+<html lang= "en-US" dir="ltr">
+<!-- href="{{ url_for('static' , filename='css/style.css') }}" -->
+<head>
+
+	<title>Command your Curtain :) </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"  href="{{ url_for('static' , filename='css/style.css') }}" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+</head>
+<body>
+	<header>
+		<div class="header">
+		<h1>Tell us what to do :)</h1>
+		<h2>In this page you can position your curtain using the arrows in the middle section , yay!</h2>
+		</div>
+	</header>
+	<section class="mainPart gridContainer">
+		<label class="item1">
+		<div class="progress">position <span id="percent">100%</span></div>
+		<input type="number" class="syncInput" placeholder="Enter your desired position in percentage(without % sign)"></input>
+		</label>
+		<button class="lowBtn btn item2"><i class="left arrow"></i></button>
+		<button class="btn go item3" >GOoOo!</button>
+		<button class="hiBtn btn item4" ><i class="right arrow"></i></button>
+		<a class="item5" href="#" ><img class="watch"src="https://img.icons8.com/ios-glyphs/30/000000/womens-watch.png"/></a>
+		<label class="switch item6">
+			<input type="checkbox">
+			<span class="slider"></span>
+		</label>
+	</section>
+	<div class="modal">
+		<div class="modal-content">
+			<span class="close" >&times;</span>
+			<header class="modal-header">
+				<h1>Schedule</h1>
+			</header>
+			<div class="form">
+				<form class="scaduleForm">
+					<label>
+					  Open Time:
+						<input type="time" name="openTime" required>
+					</label>
+				<label>
+					Close Time:
+					<input type="time" name="closeTime" required>
+				</label>
+				<button type="submit" id="modal-submit">ok</button>
+				</form>
+				<p class="scaduleDoneMessage">Done saving But...</p>
+				<p class= "flash" >this functionality doesn't wrok yet wait for our updates :)</p>
+			</div> 
+	</div>
+</div>
+	<footer>
+		<img class="icon" src="https://img.icons8.com/material-two-tone/48/000000/telegram-app.png"/>
+		<img class="icon" src="https://img.icons8.com/material-two-tone/48/000000/linkedin.png"/>
+		<img class="icon" src="https://img.icons8.com/material-two-tone/48/000000/gmail.png"/>
+		<img class="icon" src="https://img.icons8.com/material-two-tone/48/000000/instagram-new.png"/>
+		<br>
+		<a href="https://icons8.com/icon/l7PLniR__Vsn/telegram-app" target="_blank">Icons by Icons8</a>
+	</footer>
+	<script type="text/javascript" src="{{ url_for('static' , filename = 'js/JavaScript.js') }}"></script>
+</body>
+</html>
+
